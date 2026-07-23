@@ -36,3 +36,15 @@
 .menu-item strong {
   font-size: 1.1rem;
 }
+
+.featured-badge {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background-color: #fff3cd;
+  font-size: 0.85rem;
+  font-weight: 700;
+  background: #8b0000;
+  color: white;
+}

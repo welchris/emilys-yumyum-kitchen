@@ -14,9 +14,10 @@ function App() {
           <h2>Welcome to Emily's Yumyum Kitchen</h2>
           <p>Homemade Filipino favorites made with love by Lola Sandok.</p>
         </section>
+          <MenuSection items={menuItems} />
       </main>
 
-      <MenuSection items={menuItems} />
+  
     </>
   );
 }
