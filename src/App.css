@@ -19,3 +19,33 @@ main {
   line-height: 1.7;
   color: #493328;
 }
+
+body {
+  background-image: url("./assets/backgrounds/background.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.hero__image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.hero__lola-image {
+  width: min(100%, 360px);
+  height: auto;
+  border: 8px solid #fff7e8;
+  border-radius: 50%;
+  box-shadow: 0 12px 30px rgba(92, 56, 25, 0.25);
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .hero__lola-image {
+    width: min(80%, 280px);
+  }
+}

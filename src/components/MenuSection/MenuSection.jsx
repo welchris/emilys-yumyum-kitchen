@@ -3,16 +3,22 @@ import { useState } from "react";
 
 function MenuSection({ items }) {
   const [showFeaturedOnly, setShowFeaturedOnly] = useState(false);
-  const displayedItems = showFeaturedOnly
-    ? items.filter((item) => item.featured)
-    : items;
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const displayedItems = items.filter((item) =>
+    item.name.toLowerCase().includes(searchTerm.toLowerCase()),
+  );
 
   return (
     <section id="menu">
       <h2>Our Menu</h2>
-      
-      <button 
-      onClick={() => setShowFeaturedOnly(!showFeaturedOnly)}>
+      <input
+        type="text"
+        placeholder="Search dishes..."
+        value={searchTerm}
+        onChange={(event) => setSearchTerm(event.target.value)}
+      />
+      <button onClick={() => setShowFeaturedOnly(!showFeaturedOnly)}>
         {showFeaturedOnly ? "Show All Dishes" : "Show Featured Only"}
       </button>
       <ul>
